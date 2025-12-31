@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zgradba centralno procesne enote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Zgradba centralno procesne enote</h1>
+    <p id="podNaslov">2. projektna naloga: spletna stran (Urban Ekar)</p>
+</header>
+
+<nav>
+    <button class="nav-btn active" onclick="showSection('uvod', this)">Uvod</button>
+    <button class="nav-btn" onclick="showSection('krmilna', this)">Krmilna enota</button>
+    <button class="nav-btn" onclick="showSection('bitnost', this)">Bitnost & Podnožje</button>
+    <button class="nav-btn" onclick="showSection('registri', this)">Registri</button>
+    <button class="nav-btn" onclick="showSection('kviz', this)">Kviz</button>
+</nav>
+
+<section id="uvod" class="content">
+    <h2>Uvod in naloge procesorja</h2>
+
+    <p>
+        Centralna procesna enota (CPE), imenovana tudi procesor ali mikroprocesor,
+        je osrednji in najpomembnejši del računalniškega sistema. Njena osnovna naloga
+        je izvajanje ukazov računalniškega programa, ki so shranjeni v delovnem pomnilniku.
+        Procesor skrbi za usklajeno delovanje vseh ostalih komponent računalnika in
+        nadzoruje potek celotnega procesa obdelave podatkov.
+    </p>
+
+    <p>
+        CPE izvaja različne vrste operacij. Med najpomembnejše sodijo osnovne aritmetične
+        operacije, kot so seštevanje, odštevanje, množenje in deljenje, ter logične
+        operacije, kot so primerjave, logični IN, ALI in NE. Poleg tega procesor
+        sodeluje tudi pri vhodno-izhodnih operacijah, kjer omogoča komunikacijo
+        med računalnikom in zunanjimi napravami.
+    </p>
+
+    <p>
+        Razvoj procesorjev se je skozi zgodovino močno spreminjal. Prvi procesorji
+        so bili 4-bitni, danes pa uporabljamo 64-bitne večjedrne procesorje, ki omogočajo
+        hkratno izvajanje več programov. Večjedrni procesorji bistveno izboljšajo
+        zmogljivost sistema, saj omogočajo paralelno obdelavo podatkov in boljšo
+        izrabo sistemskih virov.
+    </p>
+</section>
+
+<section id="krmilna" class="content hidden">
+    <h2>Krmilna enota</h2>
+
+    <p>
+        Krmilna enota je eden izmed ključnih sestavnih delov centralne procesne enote,
+        saj je odgovorna za nadzor, usklajevanje in pravilno delovanje vseh delov
+        procesorja. Njena glavna naloga je krmiljenje toka podatkov ter določanje,
+        katere operacije se bodo izvedle in v kakšnem vrstnem redu.
+    </p>
+
+    <p>
+        Krmilna enota sama ne izvaja aritmetičnih ali logičnih operacij, temveč deluje
+        kot “dirigent” procesorja. Iz pomnilnika bere ukaze, zapisane v strojni obliki,
+        jih razpozna in dekodira ter na podlagi tega generira krmilne signale.
+        Ti signali aktivirajo posamezne enote v procesorju, kot so aritmetično-logična
+        enota, registri in pomnilniški vmesniki.
+    </p>
+
+    <p>
+        Pomemben del krmilne enote je ukazni register, kamor se shrani trenutni ukaz,
+        ki ga procesor izvaja. Ukazni dekodirnik nato razčleni ukaz in določi, katere
+        operacije so potrebne. Programski števec skrbi za pravilno zaporedje ukazov,
+        saj določa naslov naslednjega ukaza v pomnilniku.
+    </p>
+
+    <p>
+        Brez krmilne enote procesor ne bi mogel pravilno delovati, saj ne bi bilo
+        mogoče zagotoviti pravilnega zaporedja izvajanja ukazov in usklajenega
+        delovanja vseh notranjih enot procesorja.
+    </p>
+</section>
+
+<section id="bitnost" class="content hidden">
+    <h2>Bitnost in podnožje procesorja</h2>
+
+    <p>
+        Bitnost procesorja določa, koliko bitov podatkov lahko procesor obdela
+        hkrati v enem ciklu. Na primer, 32-bitni procesor lahko obdela 32 bitov
+        naenkrat, medtem ko 64-bitni procesor obdela 64 bitov. Večja bitnost
+        omogoča obdelavo večjih količin podatkov, večjo natančnost ter uporabo
+        večjega naslovnega prostora pomnilnika.
+    </p>
+
+    <p>
+        Pri sodobnih računalnikih je standard postala 64-bitna arhitektura,
+        saj omogoča boljše delovanje zahtevnih programov in operacijskih sistemov.
+        Kljub temu je treba poudariti, da je lahko oznaka bitnosti včasih zavajajoča.
+        Nekateri procesorji, kot je AMD XP, so sicer 32-bitni, vendar uporabljajo
+        64-bitna podatkovna vodila, kar omogoča hitrejši prenos podatkov.
+    </p>
+
+    <p>
+        Podnožje procesorja, imenovano tudi socket, je fizični priključek na
+        matični plošči, kamor vstavimo procesor. Podnožja se razlikujejo glede
+        na tip procesorja, število pinov in njihovo razporeditev. Zaradi tega
+        procesor ni združljiv z vsako matično ploščo, kar je pomembno pri
+        nadgradnji ali sestavljanju računalnika.
+    </p>
+
+    <p>
+        Vsaka nova generacija procesorjev lahko uporablja enako ali povsem novo
+        vrsto podnožja, kar uporabnike pogosto omeji pri izbiri komponent.
+        Razliko med procesorji in podnožji najlažje opazimo, če procesor obrnemo
+        navzdol in pogledamo število ter razporeditev kontaktov.
+    </p>
+</section>
+
+<section id="registri" class="content hidden">
+    <h2>Registri</h2>
+
+    <p>
+        Registri so najhitrejši in najmanjši pomnilniški elementi v računalniku,
+        saj se nahajajo neposredno znotraj procesorja. Namenjeni so shranjevanju
+        podatkov, operandov in naslovov, ki jih procesor trenutno obdeluje.
+        Zaradi svoje lege omogočajo izjemno hiter dostop do podatkov.
+    </p>
+
+    <p>
+        Glavna prednost registrov je njihova hitrost. Dostop do registrov je
+        bistveno hitrejši kot dostop do delovnega pomnilnika (RAM), kar pomeni,
+        da procesor porabi manj časa za prenos podatkov. Ker je registrov malo,
+        so ukazi krajši in bolj učinkoviti, kar pozitivno vpliva na zmogljivost
+        celotnega sistema.
+    </p>
+
+    <p>
+        Registri se delijo na programsko dostopne in programsko nedostopne.
+        Programsko dostopni registri so namenjeni neposredni uporabi pri
+        programiranju, medtem ko so programsko nedostopni registri namenjeni
+        notranjemu delovanju procesorja. Med pomembnejše sodijo akumulatorji,
+        programski števec (PC), naslovni register (AR), podatkovni register (DR)
+        in statusni register (CCR).
+    </p>
+
+    <p>
+        Sodobni procesorji vsebujejo tudi dodatne 64- in 128-bitne registre,
+        ki omogočajo uporabo posebnih multimedijskih ukazov, kot so MMX, SSE,
+        SSE2 in SSE3. Ti ukazi izboljšajo obdelavo grafike, zvoka in videa ter
+        povečajo zmogljivost procesorja pri zahtevnih opravilih.
+    </p>
+</section>
+
+<section id="kviz" class="content hidden">
+    <h2>Kviz – preveri znanje</h2>
+
+    <h3>Uvod in naloge procesorja</h3>
+
+    <p>1. Kaj je osnovna naloga CPE?</p>
+    <label><input type="radio" name="q1" value="1"> Izvajanje ukazov računalniškega programa</label><br>
+    <label><input type="radio" name="q1" value="0"> Shranjevanje podatkov</label><br>
+
+    <p>2. Katera NI osnovna funkcija procesorja?</p>
+    <label><input type="radio" name="q2" value="1"> Pretvorba podatkov v digitalno obliko</label><br>
+    <label><input type="radio" name="q2" value="0"> Logične operacije</label><br>
+
+    <p>3. Kaj pomeni pojem jedro?</p>
+    <label><input type="radio" name="q3" value="1"> Del procesorja, ki izvaja osnovne naloge</label><br>
+    <label><input type="radio" name="q3" value="0"> Pomnilniška enota</label><br>
+
+    <p>4. Prednost večjedrnih procesorjev?</p>
+    <label><input type="radio" name="q4" value="1"> Hkratno izvajanje več nalog</label><br>
+    <label><input type="radio" name="q4" value="0"> Manjša frekvenca</label><br>
+
+    <h3>Krmilna enota</h3>
+
+    <p>5. Glavna naloga krmilne enote?</p>
+    <label><input type="radio" name="q5" value="1"> Krmiljenje in usklajevanje delovanja enot</label><br>
+    <label><input type="radio" name="q5" value="0"> Shranjevanje podatkov</label><br>
+
+    <p>6. Kako krmilna enota dekodira ukaze?</p>
+    <label><input type="radio" name="q6" value="1"> Prebere, dekodira in uskladi izvajanje</label><br>
+    <label><input type="radio" name="q6" value="0"> Neposredno jih izvede</label><br>
+
+    <p>7. Kaj NE spada med naloge krmilne enote?</p>
+    <label><input type="radio" name="q7" value="1"> Izvajanje aritmetičnih operacij</label><br>
+    <label><input type="radio" name="q7" value="0"> Generiranje krmilnih signalov</label><br>
+
+    <p>8. Kako krmilna enota zagotavlja pravilno izvajanje?</p>
+    <label><input type="radio" name="q8" value="1"> Z generiranjem krmilnih signalov</label><br>
+    <label><input type="radio" name="q8" value="0"> Z obdelavo podatkov</label><br>
+
+    <h3>Bitnost in podnožje procesorja</h3>
+
+    <p>9. Katero podatkovno vodilo je najbolj uporabljeno?</p>
+    <label><input type="radio" name="q9" value="1"> 64-bitno</label><br>
+    <label><input type="radio" name="q9" value="0"> 32-bitno</label><br>
+
+    <p>10. Kje se nahaja podnožje?</p>
+    <label><input type="radio" name="q10" value="1"> Na matični plošči</label><br>
+    <label><input type="radio" name="q10" value="0"> V grafični kartici</label><br>
+
+    <p>11. Kako se podnožja razlikujejo?</p>
+    <label><input type="radio" name="q11" value="1"> Po tipu procesorjev in vrsti matične plošče</label><br>
+    <label><input type="radio" name="q11" value="0"> Po številu uporabe</label><br>
+
+    <p>12. Procesor lahko obdeluje toliko bitov kolikor bitna je njegova?</p>
+    <label><input type="radio" name="q12" value="1"> ALE enota</label><br>
+    <label><input type="radio" name="q12" value="0"> Grafična kartica</label><br>
+
+    <h3>Registri</h3>
+
+    <p>13. Kaj so registri?</p>
+    <label><input type="radio" name="q13" value="1"> Hitri pomnilniki znotraj procesorja</label><br>
+    <label><input type="radio" name="q13" value="0"> Trdi diski</label><br>
+
+    <p>14. Glavna prednost registrov?</p>
+    <label><input type="radio" name="q14" value="1"> Hitrost in krajši ukazi</label><br>
+    <label><input type="radio" name="q14" value="0"> Večja kapaciteta</label><br>
+
+    <p>15. Kateri register hrani naslov pomnilniške besede?</p>
+    <label><input type="radio" name="q15" value="1"> Naslovni register (AR)</label><br>
+    <label><input type="radio" name="q15" value="0"> Program Counter</label><br>
+
+    <p>16. Kaj omogočajo 64- in 128-bitni registri?</p>
+    <label><input type="radio" name="q16" value="1"> Multimedijske ukaze (MMX, SSE)</label><br>
+    <label><input type="radio" name="q16" value="0"> Več grafičnih kartic</label><br>
+
+    <br>
+    <button onclick="calculateScore()">Preveri rezultat</button>
+    <p id="result"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

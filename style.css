@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+#podNaslov{
+    text-align: center;
+}
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+nav button:hover {
+    background-color: #2c3e50;
+}
+nav button.active {
+    background-color: #1f2f3d;
+    font-weight: bold;
+    border-bottom: 3px solid #ecf0f1;
+}
+.content {
+    background-color: white;
+    margin: 40px auto;
+    padding: 35px 45px;
+
+    max-width: 720px;
+    line-height: 1.75;
+    font-size: 17px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.hidden {
+    display: none;
+}
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+em {
+    color: #555;
+    font-style: italic;
+}
+/* KVIZ */ 
+.quiz-question {
+    margin-bottom: 25px;
+}
+.quiz-question h3 {
+    font-size: 17px;
+}
+.quiz-question label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+}
+button.submit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button.submit:hover {
+    background-color: #1f2f3d;
+}
